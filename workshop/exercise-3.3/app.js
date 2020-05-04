@@ -23,7 +23,6 @@ gridElem.setAttribute(
 for (let i = 0; i < 30; i++) {
   let newButton = document.createElement("button");
   newButton.classList.add("btn");
-  newButton.classList.add("grid-position");
   newButton.addEventListener("click", toggleColor);
   gridElem.appendChild(newButton);
   //newButton.innerText = i;
