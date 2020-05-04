@@ -1,0 +1,19 @@
+.btn {
+  padding: 50px;
+  margin: 10px;
+  background-color: red;
+  outline: none;
+  border-radius: 4px;
+}
+
+.pressed {
+  background-color: green;
+}
+
+.btn-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 100px;
+}

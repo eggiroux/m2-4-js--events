@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Exercise 2 Timer</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <section class="current-time">
+        <h2>Clock</h2>
+        <p class="clock" id="clock"></p>
+      </section>
+      <section class="stopwatch">
+        <h2>Stopwatch</h2>
+        <div class="stopwatch" id="stopwatch">00:00:00</div>
+        <button class="btn" id="swStart">Start</button>
+        <button class="btn" id="swStop">Stop</button>
+        <button class="btn" id="swReset">Reset</button>
+      </section>
+      <section class="timer">
+        <h2>Timer</h2>
+        <p>Enter a duration for this timer!</p>
+        <input class="timerInput" type="number" min="0" />
+        <p class="timerDisplay" id="timerDisplay">00.00.00</p>
+        <button class="btn" id="timerStart">Start Timer</button>
+      </section>
+      <script src="app.js"></script>
+    </main>
+  </body>
+</html>

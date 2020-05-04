@@ -21,3 +21,47 @@
 // Stretch goal
 // Make the countdown live (show a countdown that updates several times a
 // second)
+
+const timeElem = document.querySelector("#time");
+const resultElem = document.querySelector("#result");
+const clockElem = document.querySelector("#clock");
+
+let loops = 0;
+let value = 0;
+let intervalClock = 0;
+
+let timeToClick = Math.round(3 + Math.random() * 2);
+timeElem.innerText = timeToClick;
+
+//show time left on the clock
+let timeLeft = timeToClick;
+clockElem.innerText = timeLeft;
+
+let intervalGame = setInterval(function () {
+  if (loops === 0) {
+    console.log("gamestart");
+    intervalClock = setInterval(timerCountdown, 10);
+    window.addEventListener("click", clickGame);
+  } else if (loops === timeToClick) {
+    console.log("gameend");
+    clearInterval(intervalGame);
+    clearInterval(intervalClock);
+    clockElem.innerText = "";
+    window.removeEventListener("click", clickGame);
+    if (value === 0) {
+      resultElem.innerText = `You Lose!`;
+    }
+  }
+  loops++;
+}, 1000);
+
+function clickGame() {
+  value++;
+  resultElem.innerText = `You Win! Clicks: ${value}`;
+}
+
+function timerCountdown() {
+  timeLeft = (timeLeft - 0.01).toFixed(2);
+
+  clockElem.innerText = `Time Left: ${timeLeft}`;
+}

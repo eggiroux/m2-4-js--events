@@ -1,0 +1,16 @@
+body {
+  text-align: center;
+}
+
+.stopwatch {
+  margin-bottom: 30px;
+}
+
+.btn {
+  margin: 0px 15px;
+  padding: 10px 15px;
+}
+
+.disabled {
+  opacity: 0.3;
+}
