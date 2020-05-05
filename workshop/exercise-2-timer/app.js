@@ -49,6 +49,7 @@ function stopStopwatch() {
   console.log("stop the stopwatch");
   clearInterval(stopwatchInterval);
   startStopwatchBtn.disabled = false;
+  stopStopwatchBtn.disabled = true;
 }
 
 function resetStopwatch() {
