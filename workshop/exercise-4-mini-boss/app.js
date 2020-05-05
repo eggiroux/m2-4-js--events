@@ -31,12 +31,13 @@ function spawnGrid(gridWidth, gridHeight) {
   //give the gridElem the attributes based on this gridSize
   gridElem.setAttribute(
     "style",
-    `display: grid;
-      grid-template-columns: repeat(${gridWidth}, 80px);
-      grid-template-rows: repeat(${gridHeight}, 80px);
+    `display: inline-grid;
+    grid-template-columns: repeat(${gridWidth}, 8vw);
+    grid-template-rows: repeat(${gridHeight}, 8vh);
     
-      column-gap: 5px;
-      row-gap: 5px;`
+    column-gap: 5px;
+    row-gap: 5px;
+    align-items: stretch;`
   );
   //randomly decide how many buttons will be added and set the timer for 2 seconds per button
   let buttonQty = Math.floor(10 + Math.random() * 10);
